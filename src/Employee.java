@@ -6,6 +6,7 @@ abstract class Employee {
     private double monthlySalary;
     private int rate;
     private int age;
+    private Contract contract;
 
     public Employee(String name, int birthYear, double monthlySalary, int rate) {
         this.name = name;
@@ -13,6 +14,9 @@ abstract class Employee {
         this.monthlySalary = monthlySalary;
         this.rate = rate;
         this.age = 2023 - birthYear;
+    }
+    public void signContract(Contract newContract) {
+        this.contract = newContract;
     }
     public void setBirthYear(int birthYear){
         this.birthYear = birthYear;
@@ -25,6 +29,12 @@ abstract class Employee {
 
     public void setRate(int rate) {
         this.rate = rate;
+    }
+    public String contractInfo() {
+        if (contract != null) {
+            return "Contract details: " + contract.toString(); // Example method to show contract details
+        }
+        return "No contract information available";
     }
     public String getName(){
         return name;
