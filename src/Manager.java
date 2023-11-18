@@ -23,4 +23,11 @@ public class Manager extends Employee{
     public int getNbClients() {
         return nbClients;
     }
+
+    @Override
+    double annualIncome() {
+        int gain_factor_client = 500;
+        int gain_factor_travel = 100;
+        return ((getMonthlySalary() * 12) + (gain_factor_travel * nbTravelDays) + (gain_factor_client * nbClients));
+    }
 }

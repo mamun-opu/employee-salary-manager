@@ -12,4 +12,11 @@ public class Tester extends Employee {
     public int getNbBugs() {
         return nbBugs;
     }
+
+    @Override
+    double annualIncome() {
+        int gain_factor_error = 10;
+
+        return nbBugs * gain_factor_error;
+    }
 }

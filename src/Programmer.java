@@ -12,4 +12,10 @@ public class Programmer extends Employee{
     public int getNbProjects() {
         return nbProjects;
     }
+
+    @Override
+    double annualIncome() {
+        int gain_factor_projects = 200;
+        return nbProjects * gain_factor_projects;
+    }
 }

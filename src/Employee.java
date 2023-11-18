@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class Employee {
+abstract class Employee {
     private final String name;
     private int birthYear;
     private double monthlySalary;
@@ -44,4 +44,5 @@ public class Employee {
     public int getRate() {
         return rate;
     }
+    abstract double annualIncome();
 }
