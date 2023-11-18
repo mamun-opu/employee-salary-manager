@@ -1,7 +1,7 @@
 import java.util.Date;
 
 public class Employee {
-    private String name;
+    private final String name;
     private int birthYear;
     private double monthlySalary;
     private int rate;
@@ -14,5 +14,34 @@ public class Employee {
         this.rate = rate;
         this.age = 2023 - birthYear;
     }
+    public void setBirthYear(int birthYear){
+        this.birthYear = birthYear;
+        this.age = 2023 - birthYear;
+    }
 
+    public void setMonthlySalary(double monthlySalary) {
+        this.monthlySalary = monthlySalary;
+    }
+
+    public void setRate(int rate) {
+        this.rate = rate;
+    }
+    public String getName(){
+        return name;
+    }
+    public int getAge() {
+        return age;
+    }
+
+    public int getBirthYear() {
+        return birthYear;
+    }
+
+    public double getMonthlySalary() {
+        return monthlySalary;
+    }
+
+    public int getRate() {
+        return rate;
+    }
 }
