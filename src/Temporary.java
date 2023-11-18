@@ -12,6 +12,19 @@ class Temporary implements Contract {
         return hourlySalary * accumulatedHours;
     }
 
-    // Getters and setters for Temporary contract attributes
-    // ...
+    public void setHourlySalary(double hourlySalary) {
+        this.hourlySalary = hourlySalary;
+    }
+
+    public void setAccumulatedHours(int accumulatedHours) {
+        this.accumulatedHours = accumulatedHours;
+    }
+
+    public double getHourlySalary() {
+        return hourlySalary;
+    }
+
+    public int getAccumulatedHours() {
+        return accumulatedHours;
+    }
 }
