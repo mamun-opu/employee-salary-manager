@@ -29,5 +29,4 @@ public class Vehicle {
     public String getCategory() {
         return category;
     }
-
 }
