@@ -21,4 +21,44 @@ class Permanent implements Contract {
 
     // Getters and setters for Permanent contract attributes
     // ...
+
+    public void setAccumulatedDays(int accumulatedDays) {
+        this.accumulatedDays = accumulatedDays;
+    }
+
+    public void setBonusPerChildPerMonth(double bonusPerChildPerMonth) {
+        this.bonusPerChildPerMonth = bonusPerChildPerMonth;
+    }
+
+    public void setMarried(boolean married) {
+        this.married = married;
+    }
+
+    public void setNumChildren(int numChildren) {
+        this.numChildren = numChildren;
+    }
+
+    public double getMonthlySalary() {
+        return monthlySalary;
+    }
+
+    public void setMonthlySalary(double monthlySalary) {
+        this.monthlySalary = monthlySalary;
+    }
+
+    public boolean isMarried() {
+        return married;
+    }
+
+    public double getBonusPerChildPerMonth() {
+        return bonusPerChildPerMonth;
+    }
+
+    public int getAccumulatedDays() {
+        return accumulatedDays;
+    }
+
+    public int getNumChildren() {
+        return numChildren;
+    }
 }
