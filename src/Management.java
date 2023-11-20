@@ -49,20 +49,15 @@ public class Management {
 //    // Manager: name, birthYear, nbClients, nbTravelDays, rate, employeeVehicle
 //    // Programmer: name, birthYear, nbProjects, rate, employeeVehicle
 //    // Tester: name, birthYear, nbBugs, rate, employeeVehicle
-//    void hireTest2() {
-//        employees.clear();
-//        employees.add(new Manager("Serge", 1985, 30, 4, vt1));
-//        employees.add(new Manager("Cindy", 1974, 20, 6, 80, vt2));
-//        employees.add(new Programmer("Paul", 1993, 3, 75, m1));
-//        employees.add(new Tester("Pierre", 1987, 124, 50, m2));
-//        employees.add(new Programmer("Matt", 1981, 5, 110, vt4));
-//        employees.add(new Programmer("Sarah", 1986, 3, vt3));
-//        for (Employee employee : employees) {
-//            System.out.println("-------------------------");
-//            System.out.println(employee);
-//            System.out.println("-------------------------");
-//        }
-//    }
+    void hireTest1() {
+        Employee Serge = new Manager("Serge", 1985,23523, 30, 4, vt1);
+        Employee Cindy = new Manager("Cindy", 1974, 20, 6, 80, vt2);
+        Employee Paul = new Programmer("Paul", 1993, 3, m1, 75);
+        Employee Pierre = new Tester("Pierre", 1987, 124, m2, 50);
+        Employee Matt = new Programmer("Matt", 1981, 5, vt4, 110);
+        Employee Sarah = new Programmer("Sarah", 1986, 3, vt3, 10);
+
+    }
 //
 //    void hireTest3() {
 //        employees.clear();
