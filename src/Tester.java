@@ -2,19 +2,38 @@ public class Tester extends Employee {
     private int nbBugs;
     public Tester(String name, int birthYear, double monthlySalary, int nbBugs) {
         super(name, birthYear, monthlySalary);
-        this.nbBugs = nbBugs;
+        if(IsValidateInputs(nbBugs)){
+            this.nbBugs = nbBugs;
+        }else {
+            throw new IllegalArgumentException("invalid input for bug number");
+        }
     }
     public Tester(String name, int birthYear, double monthlySalary, int nbBugs, int rate) {
         super(name, birthYear, monthlySalary, rate);
-        this.nbBugs = nbBugs;
+        if(IsValidateInputs(nbBugs)){
+            this.nbBugs = nbBugs;
+        }else {
+            throw new IllegalArgumentException("invalid input for bug number");
+        }
     }
     public Tester(String name, int birthYear, double monthlySalary, int nbBugs, Vehicle vehicle) {
         super(name, birthYear, monthlySalary, vehicle);
-        this.nbBugs = nbBugs;
+        if(IsValidateInputs(nbBugs)){
+            this.nbBugs = nbBugs;
+        }else {
+            throw new IllegalArgumentException("invalid input for bug number");
+        }
     }
     public Tester(String name, int birthYear, double monthlySalary, int nbBugs, Vehicle vehicle, int rate) {
         super(name, birthYear, monthlySalary, vehicle, rate);
-        this.nbBugs = nbBugs;
+        if(IsValidateInputs(nbBugs)){
+            this.nbBugs = nbBugs;
+        }else {
+            throw new IllegalArgumentException("invalid input for bug number");
+        }
+    }
+    private boolean IsValidateInputs(int nbBugs) {
+        return nbBugs >= 0;
     }
     public void setNbBugs(int nbBugs) {
         this.nbBugs = nbBugs;

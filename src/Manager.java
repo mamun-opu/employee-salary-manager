@@ -3,26 +3,44 @@ public class Manager extends Employee{
     private int nbClients;
     public Manager(String name, int birthYear, double monthlySalary, int nbTravelDays, int nbClients) {
         super(name, birthYear, monthlySalary);
-        this.nbTravelDays = nbTravelDays;
-        this.nbClients = nbClients;
+        if(IsValidateInputs(nbTravelDays, nbClients)){
+            this.nbTravelDays = nbTravelDays;
+            this.nbClients = nbClients;
+        }else {
+            throw new IllegalArgumentException("invalid input for travel days or client number");
+        }
     }
     public Manager(String name, int birthYear, double monthlySalary, int nbTravelDays, int nbClients, int rate) {
         super(name, birthYear, monthlySalary, rate);
-        this.nbTravelDays = nbTravelDays;
-        this.nbClients = nbClients;
+        if(IsValidateInputs(nbTravelDays, nbClients)){
+            this.nbTravelDays = nbTravelDays;
+            this.nbClients = nbClients;
+        }else {
+            throw new IllegalArgumentException("invalid input for travel days or client number");
+        }
     }
 
     public Manager(String name, int birthYear, double monthlySalary, int nbTravelDays, int nbClients, Vehicle vehicle){
         super(name, birthYear, monthlySalary, vehicle);
-        this.nbClients = nbClients;
-        this.nbTravelDays = nbTravelDays;
+        if(IsValidateInputs(nbTravelDays, nbClients)){
+            this.nbTravelDays = nbTravelDays;
+            this.nbClients = nbClients;
+        }else {
+            throw new IllegalArgumentException("invalid input for travel days or client number");
+        }
     }
     public Manager(String name, int birthYear, double monthlySalary, int nbTravelDays, int nbClients, Vehicle vehicle, int rate){
         super(name, birthYear, monthlySalary,vehicle, rate);
-        this.nbClients = nbClients;
-        this.nbTravelDays = nbTravelDays;
+        if(IsValidateInputs(nbTravelDays, nbClients)){
+            this.nbTravelDays = nbTravelDays;
+            this.nbClients = nbClients;
+        }else {
+            throw new IllegalArgumentException("invalid input for travel days or client number");
+        }
     }
-
+    private boolean IsValidateInputs(int nbTravelDays, int nbClients) {
+        return nbTravelDays >= 0 && nbClients >= 0;
+    }
     public void setNbTravelDays(int nbTravelDays) {
         this.nbTravelDays = nbTravelDays;
     }
