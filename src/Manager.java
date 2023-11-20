@@ -5,9 +5,12 @@ public class Manager extends Employee{
         super(name, birthYear, monthlySalary, rate);
         this.nbTravelDays = nbTravelDays;
         this.nbClients = nbClients;
-        System.out.println("We have a new employee");
     }
-
+    public Manager(String name, int birthYear, double monthlySalary, int nbTravelDays, int nbClients) {
+        super(name, birthYear, monthlySalary);
+        this.nbTravelDays = nbTravelDays;
+        this.nbClients = nbClients;
+    }
     public void setNbTravelDays(int nbTravelDays) {
         this.nbTravelDays = nbTravelDays;
     }

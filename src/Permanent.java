@@ -14,9 +14,13 @@ class Permanent implements Contract {
         this.accumulatedDays = accumulatedDays;
     }
 
+//    public double accumulatedSalary() {
+//        double childBonus = (married) ? (numChildren * bonusPerChildPerMonth) : 0;
+//        return (accumulatedDays * (monthlySalary + childBonus)) / Management.workingDaysPerMonth;
+//    }
+    @Override
     public double accumulatedSalary() {
-        double childBonus = (married) ? (numChildren * bonusPerChildPerMonth) : 0;
-        return (accumulatedDays * (monthlySalary + childBonus)) / Management.workingDaysPerMonth;
+        return 0;
     }
 
 
@@ -59,4 +63,6 @@ class Permanent implements Contract {
     public int getNumChildren() {
         return numChildren;
     }
+
+
 }

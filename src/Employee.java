@@ -1,5 +1,3 @@
-import java.util.Date;
-
 abstract class Employee {
     private final String name;
     private int birthYear;
@@ -9,13 +7,27 @@ abstract class Employee {
     private Contract contract;
     private Vehicle vehicle;
 
+    public Employee(String name, int birthYear, double monthlySalary) {
+        this.name = name;
+        this.birthYear = birthYear;
+        this.monthlySalary = monthlySalary;
+        this.rate = 100;
+        this.age = 2023 - birthYear;
+        System.out.println("We have a new employee");
+        System.out.println(this.name +" : " +this.age + " : " + this.rate + " : " + this.monthlySalary);
+    }
     public Employee(String name, int birthYear, double monthlySalary, int rate) {
         this.name = name;
         this.birthYear = birthYear;
         this.monthlySalary = monthlySalary;
-        this.rate = rate;
+        if(rate < 10){
+            this.rate = 10;
+        } else this.rate = Math.min(rate, 100);
         this.age = 2023 - birthYear;
+        System.out.println("We have a new employee");
+        System.out.println(this.name +" : " +this.age + " : " + this.rate + " : " + this.monthlySalary);
     }
+
     public void signContract(Contract newContract) {
         this.contract = newContract;
     }

@@ -4,6 +4,10 @@ public class Tester extends Employee {
         super(name, birthYear, monthlySalary, rate);
         this.nbBugs = nbBugs;
     }
+    public Tester(String name, int birthYear, double monthlySalary, int nbBugs) {
+        super(name, birthYear, monthlySalary);
+        this.nbBugs = nbBugs;
+    }
 
     public void setNbBugs(int nbBugs) {
         this.nbBugs = nbBugs;
