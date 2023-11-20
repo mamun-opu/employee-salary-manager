@@ -13,7 +13,7 @@ abstract class Employee {
         this.monthlySalary = monthlySalary;
         this.rate = 100;
         this.age = 2023 - birthYear;
-        System.out.print("We have a new employee: ");
+        System.out.print("We have a new employee: " + this.name);
     }
     public Employee(String name, int birthYear, double monthlySalary, int rate) {
         this(name, birthYear, monthlySalary);

@@ -3,18 +3,22 @@ public class Programmer extends Employee{
     public Programmer(String name, int birthYear, double monthlySalary, int nbProjects) {
         super(name, birthYear, monthlySalary);
         this.nbProjects = nbProjects;
+        System.out.println(", programmer!");
     }
     public Programmer(String name, int birthYear, double monthlySalary, int nbProjects, int rate) {
         super(name, birthYear, monthlySalary, rate);
         this.nbProjects = nbProjects;
+        System.out.println(", programmer!");
     }
     public Programmer(String name, int birthYear, double monthlySalary, int nbProjects, Vehicle vehicle) {
         super(name, birthYear, monthlySalary, vehicle);
         this.nbProjects = nbProjects;
+        System.out.println(", programmer!");
     }
     public Programmer(String name, int birthYear, double monthlySalary, int nbProjects, Vehicle vehicle, int rate) {
         super(name, birthYear, monthlySalary, vehicle, rate);
         this.nbProjects = nbProjects;
+        System.out.println(", programmer!");
     }
 
 

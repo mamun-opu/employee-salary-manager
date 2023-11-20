@@ -15,6 +15,7 @@ public class Tester extends Employee {
         }else {
             throw new IllegalArgumentException("invalid input for bug number");
         }
+        System.out.println(", tester!");
     }
     public Tester(String name, int birthYear, double monthlySalary, int nbBugs, Vehicle vehicle) {
         super(name, birthYear, monthlySalary, vehicle);
@@ -23,6 +24,7 @@ public class Tester extends Employee {
         }else {
             throw new IllegalArgumentException("invalid input for bug number");
         }
+        System.out.println(", tester!");
     }
     public Tester(String name, int birthYear, double monthlySalary, int nbBugs, Vehicle vehicle, int rate) {
         super(name, birthYear, monthlySalary, vehicle, rate);
@@ -31,6 +33,7 @@ public class Tester extends Employee {
         }else {
             throw new IllegalArgumentException("invalid input for bug number");
         }
+        System.out.println(", tester!");
     }
     private boolean IsValidateInputs(int nbBugs) {
         return nbBugs >= 0;

@@ -9,6 +9,7 @@ public class Manager extends Employee{
         }else {
             throw new IllegalArgumentException("invalid input for travel days or client number");
         }
+        System.out.println(", manager!");
     }
     public Manager(String name, int birthYear, double monthlySalary, int nbTravelDays, int nbClients, int rate) {
         super(name, birthYear, monthlySalary, rate);
@@ -18,6 +19,7 @@ public class Manager extends Employee{
         }else {
             throw new IllegalArgumentException("invalid input for travel days or client number");
         }
+        System.out.println(", manager!");
     }
 
     public Manager(String name, int birthYear, double monthlySalary, int nbTravelDays, int nbClients, Vehicle vehicle){
@@ -28,6 +30,7 @@ public class Manager extends Employee{
         }else {
             throw new IllegalArgumentException("invalid input for travel days or client number");
         }
+        System.out.println(", manager!");
     }
     public Manager(String name, int birthYear, double monthlySalary, int nbTravelDays, int nbClients, Vehicle vehicle, int rate){
         super(name, birthYear, monthlySalary,vehicle, rate);
@@ -37,6 +40,7 @@ public class Manager extends Employee{
         }else {
             throw new IllegalArgumentException("invalid input for travel days or client number");
         }
+        System.out.println(", manager!");
     }
     private boolean IsValidateInputs(int nbTravelDays, int nbClients) {
         return nbTravelDays >= 0 && nbClients >= 0;
