@@ -1,13 +1,13 @@
 public class Manager extends Employee{
     private int nbTravelDays;
     private int nbClients;
-    public Manager(String name, int birthYear, double monthlySalary, int rate, int nbTravelDays, int nbClients) {
-        super(name, birthYear, monthlySalary, rate);
+    public Manager(String name, int birthYear, double monthlySalary, int rate, Vehicle vehicle, int nbTravelDays, int nbClients) {
+        super(name, birthYear, monthlySalary, rate, vehicle);
         this.nbTravelDays = nbTravelDays;
         this.nbClients = nbClients;
     }
-    public Manager(String name, int birthYear, double monthlySalary, int nbTravelDays, int nbClients) {
-        super(name, birthYear, monthlySalary);
+    public Manager(String name, int birthYear, double monthlySalary, Vehicle vehicle, int nbTravelDays, int nbClients) {
+        super(name, birthYear, monthlySalary, vehicle);
         this.nbTravelDays = nbTravelDays;
         this.nbClients = nbClients;
     }

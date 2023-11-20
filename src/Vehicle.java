@@ -13,7 +13,7 @@ public class Vehicle {
             this.category = "RACE";
         } else if (category == Management.VehicleType.NOT_FOR_RACE) {
             this.category = "NOT_FOR_RACE";
-        } else if(category == Management.VehicleType.FAMILY){
+        } else if(category == Management.VehicleType.Family){
             this.category = "FAMILY";
         }
     }

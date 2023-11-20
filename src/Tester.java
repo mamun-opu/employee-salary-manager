@@ -1,11 +1,11 @@
 public class Tester extends Employee {
     private int nbBugs;
-    public Tester(String name, int birthYear, double monthlySalary, int rate, int nbBugs) {
-        super(name, birthYear, monthlySalary, rate);
+    public Tester(String name, int birthYear, double monthlySalary, int rate, Vehicle vehicle, int nbBugs) {
+        super(name, birthYear, monthlySalary, rate, vehicle);
         this.nbBugs = nbBugs;
     }
-    public Tester(String name, int birthYear, double monthlySalary, int nbBugs) {
-        super(name, birthYear, monthlySalary);
+    public Tester(String name, int birthYear, double monthlySalary, Vehicle vehicle, int nbBugs) {
+        super(name, birthYear, monthlySalary, vehicle);
         this.nbBugs = nbBugs;
     }
 
