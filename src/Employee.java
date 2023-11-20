@@ -7,6 +7,7 @@ abstract class Employee {
     private int rate;
     private int age;
     private Contract contract;
+    private Vehicle vehicle;
 
     public Employee(String name, int birthYear, double monthlySalary, int rate) {
         this.name = name;

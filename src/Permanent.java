@@ -19,8 +19,6 @@ class Permanent implements Contract {
         return (accumulatedDays * (monthlySalary + childBonus)) / Management.workingDaysPerMonth;
     }
 
-    // Getters and setters for Permanent contract attributes
-    // ...
 
     public void setAccumulatedDays(int accumulatedDays) {
         this.accumulatedDays = accumulatedDays;

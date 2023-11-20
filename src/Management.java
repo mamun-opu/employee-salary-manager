@@ -6,6 +6,7 @@ public class Management {
 
     List<Employee> employees = new ArrayList<>();
 
+//    private Object VehicleType;
     // constructor for Motorcycle
     // make, plate, color, category, sidecar
     Motorcycle m1 = new Motorcycle("Kawasaki", "Custom Plate", "Yellow", VehicleType.RACE, false);
