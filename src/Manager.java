@@ -1,16 +1,28 @@
 public class Manager extends Employee{
     private int nbTravelDays;
     private int nbClients;
-    public Manager(String name, int birthYear, double monthlySalary, int rate, int nbTravelDays, int nbClients, Vehicle vehicle) {
-        super(name, birthYear, monthlySalary, rate, vehicle);
+    public Manager(String name, int birthYear, double monthlySalary, int nbTravelDays, int nbClients) {
+        super(name, birthYear, monthlySalary);
         this.nbTravelDays = nbTravelDays;
         this.nbClients = nbClients;
     }
-    public Manager(String name, int birthYear, double monthlySalary, int nbTravelDays, int nbClients, Vehicle vehicle) {
+    public Manager(String name, int birthYear, double monthlySalary, int nbTravelDays, int nbClients, int rate) {
+        super(name, birthYear, monthlySalary, rate);
+        this.nbTravelDays = nbTravelDays;
+        this.nbClients = nbClients;
+    }
+
+    public Manager(String name, int birthYear, double monthlySalary, int nbTravelDays, int nbClients, Vehicle vehicle){
         super(name, birthYear, monthlySalary, vehicle);
-        this.nbTravelDays = nbTravelDays;
         this.nbClients = nbClients;
+        this.nbTravelDays = nbTravelDays;
     }
+    public Manager(String name, int birthYear, double monthlySalary, int nbTravelDays, int nbClients, Vehicle vehicle, int rate){
+        super(name, birthYear, monthlySalary,vehicle, rate);
+        this.nbClients = nbClients;
+        this.nbTravelDays = nbTravelDays;
+    }
+
     public void setNbTravelDays(int nbTravelDays) {
         this.nbTravelDays = nbTravelDays;
     }

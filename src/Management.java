@@ -4,7 +4,7 @@ import java.util.List;
 public class Management {
 //    static double workingDaysPerMonth = 20.0;
 //
-//    List<Employee> employees = new ArrayList<>();
+    List<Employee> employees = new ArrayList<>();
 //
 ////    private Object VehicleType;
     public enum VehicleType {
@@ -36,26 +36,26 @@ public class Management {
     // Manager: name, birthYear, nbClients, nbTravelDays, rate
     // Programmer: name, birthYear, nbProjects, rate
     // Tester: name, birthYear, nbBugs, rate
-//    void hireTest1() {
-//        employees.add(new Manager("Serge", 1985, 30, 4));
-//        employees.add(new Manager("Cindy", 1974, 20, 6, 80));
-//        employees.add(new Programmer("Paul", 1993, 3, 75));
-//        employees.add(new Tester("Pierre", 1987, 124, 50));
-//        employees.add(new Programmer("Matt", 1981, 5, 110));
-//        employees.add(new Programmer("Sarah", 1986, 3));
-//    }
+    void hireTest1() {
+        employees.add(new Manager("Serge", 1985,1200,23, 30, 4));
+        employees.add(new Manager("Cindy", 1974, 20, 6, 80));
+        employees.add(new Programmer("Paul", 1993, 3, 75));
+        employees.add(new Tester("Pierre", 1987,1500, 124, 50));
+        employees.add(new Programmer("Matt", 1981, 5, 110));
+        employees.add(new Programmer("Sarah", 1986,1500, 3));
+    }
 //
 //    //    Employee constructors
 //    // Manager: name, birthYear, nbClients, nbTravelDays, rate, employeeVehicle
 //    // Programmer: name, birthYear, nbProjects, rate, employeeVehicle
 //    // Tester: name, birthYear, nbBugs, rate, employeeVehicle
-    void hireTest1() {
+    void hireTest2() {
         Employee Serge = new Manager("Serge", 1985,23523, 30, 4, vt1);
         Employee Cindy = new Manager("Cindy", 1974, 20, 6, 80, vt2);
-        Employee Paul = new Programmer("Paul", 1993, 3, m1, 75);
-        Employee Pierre = new Tester("Pierre", 1987, 124, m2, 50);
-        Employee Matt = new Programmer("Matt", 1981, 5, vt4, 110);
-        Employee Sarah = new Programmer("Sarah", 1986, 3, vt3, 10);
+        Employee Paul = new Programmer("Paul", 1993,1200, 3, m1, 75);
+        Employee Pierre = new Tester("Pierre", 1987,1230, 124, m2, 50);
+        Employee Matt = new Programmer("Matt", 1981,1400, 5, vt4, 110);
+        Employee Sarah = new Programmer("Sarah", 1986,1500, 3, vt3, 10);
 
     }
 //

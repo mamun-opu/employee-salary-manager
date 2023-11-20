@@ -7,28 +7,30 @@ abstract class Employee {
     private Contract contract;
     private Vehicle vehicle;
 
-    public Employee(String name, int birthYear, double monthlySalary, Vehicle vehicle) {
+    public Employee(String name, int birthYear, double monthlySalary) {
         this.name = name;
         this.birthYear = birthYear;
         this.monthlySalary = monthlySalary;
         this.rate = 100;
         this.age = 2023 - birthYear;
-        this.vehicle = vehicle;
         System.out.println("We have a new employee");
         System.out.println(this.name +" : " +this.age + " : " + this.rate + " : " + this.monthlySalary);
     }
-    public Employee(String name, int birthYear, double monthlySalary, int rate, Vehicle vehicle) {
-        this.name = name;
-        this.birthYear = birthYear;
-        this.monthlySalary = monthlySalary;
+    public Employee(String name, int birthYear, double monthlySalary, int rate) {
+        this(name, birthYear, monthlySalary);
         if(rate < 10){
             this.rate = 10;
         } else this.rate = Math.min(rate, 100);
-        this.age = 2023 - birthYear;
-        this.vehicle = vehicle;
-        System.out.println("We have a new employee");
-        System.out.println(this.name +" : " +this.age + " : " + this.rate + " : " + this.monthlySalary);
     }
+    public Employee(String name, int birthYear, double monthlySalary, Vehicle vehicle, int rate) {
+        this(name, birthYear, monthlySalary, rate);
+        this.vehicle = vehicle;
+    }
+    public Employee(String name, int birthYear, double monthlySalary, Vehicle vehicle) {
+        this(name, birthYear, monthlySalary);
+        this.vehicle = vehicle;
+    }
+
 
     public void signContract(Contract newContract) {
         this.contract = newContract;

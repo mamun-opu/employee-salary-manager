@@ -1,13 +1,22 @@
 public class Programmer extends Employee{
     private int nbProjects;
-    public Programmer(String name, int birthYear, double monthlySalary, int rate, Vehicle vehicle, int nbProjects) {
-        super(name, birthYear, monthlySalary, rate, vehicle);
+    public Programmer(String name, int birthYear, double monthlySalary, int nbProjects) {
+        super(name, birthYear, monthlySalary);
         this.nbProjects = nbProjects;
     }
-    public Programmer(String name, int birthYear, double monthlySalary, Vehicle vehicle, int nbProjects) {
+    public Programmer(String name, int birthYear, double monthlySalary, int nbProjects, int rate) {
+        super(name, birthYear, monthlySalary, rate);
+        this.nbProjects = nbProjects;
+    }
+    public Programmer(String name, int birthYear, double monthlySalary, int nbProjects, Vehicle vehicle) {
         super(name, birthYear, monthlySalary, vehicle);
         this.nbProjects = nbProjects;
     }
+    public Programmer(String name, int birthYear, double monthlySalary, int nbProjects, Vehicle vehicle, int rate) {
+        super(name, birthYear, monthlySalary, vehicle, rate);
+        this.nbProjects = nbProjects;
+    }
+
 
     public void setNbProjects(int nbProjects) {
         this.nbProjects = nbProjects;
