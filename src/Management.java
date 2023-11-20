@@ -31,6 +31,7 @@ public class Management {
     Car vt3 = new Car("Renault Clio", "Custom Plate", "Blue", VehicleType.Family, Gear.Manual, CarType.Hatchback);
     Car vt4 = new Car("Mazda", "Custom Plate", "White", VehicleType.Family, Gear.Automatic, CarType.SUV);
 
+
     //    Employee constructors
     // Manager: name, birthYear, nbClients, nbTravelDays, rate
     // Programmer: name, birthYear, nbProjects, rate

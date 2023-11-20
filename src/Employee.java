@@ -17,7 +17,7 @@ abstract class Employee {
         System.out.println("We have a new employee");
         System.out.println(this.name +" : " +this.age + " : " + this.rate + " : " + this.monthlySalary);
     }
-    public Employee(String name, int birthYear, double monthlySalary, int rate) {
+    public Employee(String name, int birthYear, double monthlySalary, int rate, Vehicle vehicle) {
         this.name = name;
         this.birthYear = birthYear;
         this.monthlySalary = monthlySalary;
@@ -25,6 +25,7 @@ abstract class Employee {
             this.rate = 10;
         } else this.rate = Math.min(rate, 100);
         this.age = 2023 - birthYear;
+        this.vehicle = vehicle;
         System.out.println("We have a new employee");
         System.out.println(this.name +" : " +this.age + " : " + this.rate + " : " + this.monthlySalary);
     }
@@ -44,6 +45,11 @@ abstract class Employee {
     public void setRate(int rate) {
         this.rate = rate;
     }
+
+    public void setVehicle(Vehicle vehicle) {
+        this.vehicle = vehicle;
+    }
+
     public String contractInfo() {
         if (contract != null) {
             return "Contract details: " + contract.toString(); // Example method to show contract details
@@ -68,5 +74,10 @@ abstract class Employee {
     public int getRate() {
         return rate;
     }
+
+    public Vehicle getVehicle() {
+        return vehicle;
+    }
+
     abstract double annualIncome();
 }
