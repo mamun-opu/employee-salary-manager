@@ -1,6 +1,6 @@
 public class Motorcycle extends Vehicle {
     private boolean sidecar;
-    public Motorcycle(String make, String plate, String color, String category, boolean sidecar) {
+    public Motorcycle(String make, String plate, String color, Management.VehicleType category, boolean sidecar) {
         super(make, plate, color, category);
         this.sidecar = sidecar;
     }

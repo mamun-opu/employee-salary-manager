@@ -2,12 +2,20 @@ public class Vehicle {
     private final String make;
     private final String plate;
     private String color;
-    private final String category;
-    public Vehicle(String make, String plate, String color, String category){
+    private String category;
+
+    public Vehicle(String make, String plate,String color, Management.VehicleType category){
         this.make = make;
         this.plate = plate;
         this.color = color;
-        this.category = category;
+
+        if(category == Management.VehicleType.RACE){
+            this.category = "RACE";
+        } else if (category == Management.VehicleType.NOT_FOR_RACE) {
+            this.category = "NOT_FOR_RACE";
+        } else if(category == Management.VehicleType.FAMILY){
+            this.category = "FAMILY";
+        }
     }
 
     public void setColor(String color) {

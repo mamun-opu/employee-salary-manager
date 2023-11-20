@@ -1,4 +1,6 @@
 public class Main {
+
+
     public static void main(String[] args) {
 
 //        //Test part 1
@@ -15,8 +17,15 @@ public class Main {
 //        System.out.println("Test 3: ");
 //        System.out.println("Employees description: ");
 //        management.hireTest3();
-        Employee Serge = new Manager("Serge", 1985, 30, 4, 10 );
-        Employee victor = new Tester("victor", 1996, 1300, 12);
-        Employee mamun = new Programmer("mamun", 1998, 1000, 80, 2);
+//        Employee Serge = new Manager("Serge", 1985, 30, 4, 10 );
+//        Employee victor = new Tester("victor", 1996, 1300, 12);
+//        Employee mamun = new Programmer("mamun", 1998, 1000, 80, 2);
+//        Object VehicleType = new Object();
+//        VehicleType.race = 'Race';
+        // Define an enum called Color with constants representing different colors
+
+
+
+
     }
 }

@@ -7,22 +7,34 @@ public class Management {
 //    List<Employee> employees = new ArrayList<>();
 //
 ////    private Object VehicleType;
+    public enum VehicleType {
+        RACE, NOT_FOR_RACE, Family
+    }
+
+    public enum Gear{
+        Automatic, Manual
+    }
+    public enum CarType{
+        Sport, Sedan, Hatchback, SUV
+    }
+
+
 //    // constructor for Motorcycle
 //    // make, plate, color, category, sidecar
-//    Motorcycle m1 = new Motorcycle("Kawasaki", "Custom Plate", "Yellow", VehicleType.RACE, false);
-//    Motorcycle m2 = new Motorcycle("Honda", "Custom Plate", "Black", VehicleType.NOT_FOR_RACE, true);
+    Motorcycle m1 = new Motorcycle("Kawasaki", "Custom Plate", "Yellow", VehicleType.RACE, false);
+    Motorcycle m2 = new Motorcycle("Honda", "Custom Plate", "Black", VehicleType.NOT_FOR_RACE, true);
 //
 //    // constructor for Car
 //    // make, plate, color, category, gear, type
-//    Car vt1 = new Car("Lamborghini", "Custom Plate", "White", VehicleType.Family, Gear.Manual, CarType.Sport);
-//    Car vt2 = new Car("BMW", "Custom Plate", "Black", VehicleType.Family, Gear.Automatic, CarType.Sedan);
-//    Car vt3 = new Car("Renault Clio", "Custom Plate", "Blue", VehicleType.Family, Gear.Manual, CarType.Hatchback);
-//    Car vt4 = new Car("Mazda", "Custom Plate", "White", VehicleType.Family, Gear.Automatic, CarType.SUV);
-//
-//    //    Employee constructors
-//    // Manager: name, birthYear, nbClients, nbTravelDays, rate
-//    // Programmer: name, birthYear, nbProjects, rate
-//    // Tester: name, birthYear, nbBugs, rate
+    Car vt1 = new Car("Lamborghini", "Custom Plate", "White", VehicleType.Family, Gear.Manual, CarType.Sport);
+    Car vt2 = new Car("BMW", "Custom Plate", "Black", VehicleType.Family, Gear.Automatic, CarType.Sedan);
+    Car vt3 = new Car("Renault Clio", "Custom Plate", "Blue", VehicleType.Family, Gear.Manual, CarType.Hatchback);
+    Car vt4 = new Car("Mazda", "Custom Plate", "White", VehicleType.Family, Gear.Automatic, CarType.SUV);
+
+    //    Employee constructors
+    // Manager: name, birthYear, nbClients, nbTravelDays, rate
+    // Programmer: name, birthYear, nbProjects, rate
+    // Tester: name, birthYear, nbBugs, rate
 //    void hireTest1() {
 //        employees.add(new Manager("Serge", 1985, 30, 4));
 //        employees.add(new Manager("Cindy", 1974, 20, 6, 80));

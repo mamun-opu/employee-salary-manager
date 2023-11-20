@@ -7,12 +7,13 @@ abstract class Employee {
     private Contract contract;
     private Vehicle vehicle;
 
-    public Employee(String name, int birthYear, double monthlySalary) {
+    public Employee(String name, int birthYear, double monthlySalary, Vehicle vehicle) {
         this.name = name;
         this.birthYear = birthYear;
         this.monthlySalary = monthlySalary;
         this.rate = 100;
         this.age = 2023 - birthYear;
+        this.vehicle = vehicle;
         System.out.println("We have a new employee");
         System.out.println(this.name +" : " +this.age + " : " + this.rate + " : " + this.monthlySalary);
     }
