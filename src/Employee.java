@@ -12,6 +12,7 @@ public class Employee {
     // Constructors
     public Employee(String name, int birthYear) {
         this(name, birthYear, 0, 100, null);
+
     }
 
     public Employee(String name, int birthYear, Vehicle vehicle) {
@@ -31,9 +32,7 @@ public class Employee {
         this(name, birthYear,0, occupationRate,null );
     }
 
-    public String contractInfo() {
-        return null;
-    }
+
 
     public Employee(String name, int birthYear, double monthlyIncome, double occupationRate, Vehicle vehicle) {
         this.name = name;
@@ -47,12 +46,18 @@ public class Employee {
         }else{
             this.occupationRate = 100;
         }
+
+        System.out.println("We have a new employee: " + this.getName() + ", " + this.getClass().getName() );
     }
 
     // Getters
     public String getName() {
         return name;
     }
+    public String contractInfo(){
+        return this.contract.contractInfo();
+    }
+
 
     public int calculateAge() {
         return 2024 - birthYear;
@@ -65,4 +70,15 @@ public class Employee {
     }
 
 
+    public Vehicle getVehicle() {
+        return vehicle;
+    }
+
+    @Override
+    public String toString() {
+
+        return "Name: " + this.getName() + ", a " + this.getClass().getName() +'\n' +
+                this.getVehicle();
+
+    }
 }

@@ -7,4 +7,14 @@ public class Motorcycle extends Vehicle{
         this.hasSideCar = hasSideCar;
 
     }
+
+    public boolean isHasSideCar() {
+        return hasSideCar;
+    }
+
+    public String toString(){
+        String Total = super.toString();
+        Total = Total + "   -SideCar: "+ this.isHasSideCar() + "\n";
+        return  Total;
+    }
 }

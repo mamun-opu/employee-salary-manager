@@ -12,4 +12,13 @@ public class Vehicle {
         this.category = category;
     }
 
+    @Override
+    public String toString() {
+        return "Employee has a " + super.getClass().getName()+
+
+                " -make='" + make + '\n' +
+                ",-plate='" + plate + '\n' +
+                ",-color='" + color + '\n' +
+                ",-category=" + category + "\n";
+    }
 }

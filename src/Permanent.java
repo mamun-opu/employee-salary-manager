@@ -18,6 +18,11 @@ public class Permanent implements Contract{
     }
 
     @Override
+    public String contractInfo() {
+        return null;
+    }
+
+    @Override
     public String toString() {
         return "Permanent{" +
                 "workingDays=" + workingDays +

@@ -20,8 +20,9 @@ public class Temporary implements Contract {
                 '}';
     }
 
-    @Override
-    public String getContractInfo() {
+
+
+    public String contractInfo() {
         return String.format("He is a temporary employee with %.2f hourly salary, and he has worked for %d hours.\n",
                 hourlyWages, workingHours);
     }
