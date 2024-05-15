@@ -6,6 +6,8 @@ public class Employee {
     private double monthlyIncome;
     private double occupationRate;
     private Vehicle vehicle;
+    private Contract contract;
+
 
     // Constructors
     public Employee(String name, int birthYear) {
@@ -27,6 +29,10 @@ public class Employee {
 
     public Employee(String name, int birthYear, double occupationRate, Vehicle vehicle) {
         this(name, birthYear,0, occupationRate,null );
+    }
+
+    public String contractInfo() {
+        return null;
     }
 
     public Employee(String name, int birthYear, double monthlyIncome, double occupationRate, Vehicle vehicle) {
@@ -54,4 +60,9 @@ public class Employee {
     public double annualIncome(){
         return monthlyIncome * 12;
     }
+    public void signContract(Contract contract){
+        this.contract = contract;
+    }
+
+
 }
