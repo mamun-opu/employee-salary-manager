@@ -5,7 +5,7 @@ public class Permanent implements Contract{
     private boolean civilStatus;
     private double monthlyPremium;
 
-    public Permanent(int workingDays, double monthlySalary, int children, boolean civilStatus, double monthlyPremium) {
+    public Permanent(int children, boolean civilStatus,  double monthlySalary, double monthlyPremium, int workingDays) {
         this.workingDays = workingDays;
         this.monthlySalary = monthlySalary;
         this.children = children;
