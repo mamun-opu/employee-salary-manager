@@ -1,70 +1,32 @@
-public class Manager extends Employee{
-    private int nbTravelDays;
-    private int nbClients;
-    public Manager(String name, int birthYear, double monthlySalary, int nbTravelDays, int nbClients) {
-        super(name, birthYear, monthlySalary);
-        if(IsValidateInputs(nbTravelDays, nbClients)){
-            this.nbTravelDays = nbTravelDays;
-            this.nbClients = nbClients;
-        }else {
-            throw new IllegalArgumentException("invalid input for travel days or client number");
-        }
-        System.out.println(", manager!");
-    }
-    public Manager(String name, int birthYear, double monthlySalary, int nbTravelDays, int nbClients, int rate) {
-        super(name, birthYear, monthlySalary, rate);
-        if(IsValidateInputs(nbTravelDays, nbClients)){
-            this.nbTravelDays = nbTravelDays;
-            this.nbClients = nbClients;
-        }else {
-            throw new IllegalArgumentException("invalid input for travel days or client number");
-        }
-        System.out.println(", manager!");
+public class Manager extends Employee {
+    private int travelDays;
+    private int clientsNumber;
+
+    // Constructors
+    public Manager(String name, int birthYear, int clientsNumber, int travelDays) {
+        super(name, birthYear);
+        initializeManager(clientsNumber, travelDays);
     }
 
-    public Manager(String name, int birthYear, double monthlySalary, int nbTravelDays, int nbClients, Vehicle vehicle){
-        super(name, birthYear, monthlySalary, vehicle);
-        if(IsValidateInputs(nbTravelDays, nbClients)){
-            this.nbTravelDays = nbTravelDays;
-            this.nbClients = nbClients;
-        }else {
-            throw new IllegalArgumentException("invalid input for travel days or client number");
-        }
-        System.out.println(", manager!");
-    }
-    public Manager(String name, int birthYear, double monthlySalary, int nbTravelDays, int nbClients, Vehicle vehicle, int rate){
-        super(name, birthYear, monthlySalary,vehicle, rate);
-        if(IsValidateInputs(nbTravelDays, nbClients)){
-            this.nbTravelDays = nbTravelDays;
-            this.nbClients = nbClients;
-        }else {
-            throw new IllegalArgumentException("invalid input for travel days or client number");
-        }
-        System.out.println(", manager!");
-    }
-    private boolean IsValidateInputs(int nbTravelDays, int nbClients) {
-        return nbTravelDays >= 0 && nbClients >= 0;
-    }
-    public void setNbTravelDays(int nbTravelDays) {
-        this.nbTravelDays = nbTravelDays;
+    public Manager(String name, int birthYear, int travelDays, int clientsNumber, double occupationRate) {
+        super(name, birthYear, occupationRate);
+        initializeManager(clientsNumber, travelDays);
     }
 
-    public void setNbClients(int nbClients) {
-        this.nbClients = nbClients;
+    public Manager(String name, int birthYear, int clientsNumber, int travelDays, double occupationRate, Vehicle vehicle) {
+        super(name, birthYear, occupationRate, vehicle);
+        initializeManager(clientsNumber, travelDays);
     }
 
-    public int getNbTravelDays() {
-        return nbTravelDays;
+    public Manager(String name, int birthYear, int clientsNumber, int travelDays, Vehicle vehicle) {
+        super(name, birthYear, vehicle);
+        initializeManager(clientsNumber, travelDays);
     }
 
-    public int getNbClients() {
-        return nbClients;
+    private void initializeManager(int clientsNumber, int travelDays) {
+        this.clientsNumber = clientsNumber;
+        this.travelDays = travelDays;
     }
 
-    @Override
-    double annualIncome() {
-        int gain_factor_client = 500;
-        int gain_factor_travel = 100;
-        return ((getMonthlySalary() * 12) + (gain_factor_travel * nbTravelDays) + (gain_factor_client * nbClients));
-    }
+    // Getters and setters (if needed) can be added here
 }

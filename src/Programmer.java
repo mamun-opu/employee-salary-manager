@@ -1,38 +1,24 @@
 public class Programmer extends Employee{
-    private int nbProjects;
-    public Programmer(String name, int birthYear, double monthlySalary, int nbProjects) {
-        super(name, birthYear, monthlySalary);
-        this.nbProjects = nbProjects;
-        System.out.println(", programmer!");
-    }
-    public Programmer(String name, int birthYear, double monthlySalary, int nbProjects, int rate) {
-        super(name, birthYear, monthlySalary, rate);
-        this.nbProjects = nbProjects;
-        System.out.println(", programmer!");
-    }
-    public Programmer(String name, int birthYear, double monthlySalary, int nbProjects, Vehicle vehicle) {
-        super(name, birthYear, monthlySalary, vehicle);
-        this.nbProjects = nbProjects;
-        System.out.println(", programmer!");
-    }
-    public Programmer(String name, int birthYear, double monthlySalary, int nbProjects, Vehicle vehicle, int rate) {
-        super(name, birthYear, monthlySalary, vehicle, rate);
-        this.nbProjects = nbProjects;
-        System.out.println(", programmer!");
+    private int numberOfProjects;
+
+    public Programmer(String name, int birthYear, int numberOfProjects) {
+        super(name, birthYear);
+        this.numberOfProjects = numberOfProjects;
     }
 
-
-    public void setNbProjects(int nbProjects) {
-        this.nbProjects = nbProjects;
+    public Programmer(String name, int birthYear, int numberOfProjects, Vehicle vehicle) {
+        super(name, birthYear, vehicle);
+        this.numberOfProjects = numberOfProjects;
     }
 
-    public int getNbProjects() {
-        return nbProjects;
+    public Programmer(String name, int birthYear, double occupationRate, int numberOfProjects) {
+        super(name, birthYear, occupationRate);
+        this.numberOfProjects = numberOfProjects;
     }
 
-    @Override
-    double annualIncome() {
-        int gain_factor_projects = 200;
-        return nbProjects * gain_factor_projects;
+    public Programmer(String name, int birthYear, int numberOfProjects, double occupationRate, Vehicle vehicle) {
+        super(name, birthYear, occupationRate, vehicle);
+        this.numberOfProjects = numberOfProjects;
     }
+
 }

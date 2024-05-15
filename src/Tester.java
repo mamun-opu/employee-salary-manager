@@ -1,55 +1,16 @@
-public class Tester extends Employee {
-    private int nbBugs;
-    public Tester(String name, int birthYear, double monthlySalary, int nbBugs) {
-        super(name, birthYear, monthlySalary);
-        if(IsValidateInputs(nbBugs)){
-            this.nbBugs = nbBugs;
-        }else {
-            throw new IllegalArgumentException("invalid input for bug number");
-        }
-    }
-    public Tester(String name, int birthYear, double monthlySalary, int nbBugs, int rate) {
-        super(name, birthYear, monthlySalary, rate);
-        if(IsValidateInputs(nbBugs)){
-            this.nbBugs = nbBugs;
-        }else {
-            throw new IllegalArgumentException("invalid input for bug number");
-        }
-        System.out.println(", tester!");
-    }
-    public Tester(String name, int birthYear, double monthlySalary, int nbBugs, Vehicle vehicle) {
-        super(name, birthYear, monthlySalary, vehicle);
-        if(IsValidateInputs(nbBugs)){
-            this.nbBugs = nbBugs;
-        }else {
-            throw new IllegalArgumentException("invalid input for bug number");
-        }
-        System.out.println(", tester!");
-    }
-    public Tester(String name, int birthYear, double monthlySalary, int nbBugs, Vehicle vehicle, int rate) {
-        super(name, birthYear, monthlySalary, vehicle, rate);
-        if(IsValidateInputs(nbBugs)){
-            this.nbBugs = nbBugs;
-        }else {
-            throw new IllegalArgumentException("invalid input for bug number");
-        }
-        System.out.println(", tester!");
-    }
-    private boolean IsValidateInputs(int nbBugs) {
-        return nbBugs >= 0;
-    }
-    public void setNbBugs(int nbBugs) {
-        this.nbBugs = nbBugs;
+public class Tester extends Employee{
+    private int numberOfBugs;
+
+
+    public Tester(String name, int birthYear, double occupationRate, int numberOfBugs) {
+        super(name, birthYear, occupationRate);
+        this.numberOfBugs = numberOfBugs;
     }
 
-    public int getNbBugs() {
-        return nbBugs;
+
+    public Tester(String name, int birthYear,int numberOfBugs, double occupationRate, Vehicle vehicle) {
+        super(name, birthYear, occupationRate, vehicle);
+        this.numberOfBugs = numberOfBugs;
     }
 
-    @Override
-    double annualIncome() {
-        int gain_factor_error = 10;
-
-        return nbBugs * gain_factor_error;
-    }
 }

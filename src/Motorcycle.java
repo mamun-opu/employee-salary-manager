@@ -1,15 +1,10 @@
-public class Motorcycle extends Vehicle {
-    private boolean sidecar;
-    public Motorcycle(String make, String plate, String color, Management.VehicleType category, boolean sidecar) {
+public class Motorcycle extends Vehicle{
+    private boolean hasSideCar;
+
+
+    public Motorcycle(String make, String plate, String color, VehicleType category, boolean hasSideCar) {
         super(make, plate, color, category);
-        this.sidecar = sidecar;
-    }
+        this.hasSideCar = hasSideCar;
 
-    public void setSidecar(boolean sidecar) {
-        this.sidecar = sidecar;
-    }
-
-    public boolean isSidecar() {
-        return sidecar;
     }
 }
