@@ -21,4 +21,12 @@ public class Programmer extends Employee{
         this.numberOfProjects = numberOfProjects;
     }
 
+    public int getNumberOfProjects() {
+        return numberOfProjects;
+    }
+
+    @Override
+    public double annualIncome() {
+        return super.annualIncome() + this.getNumberOfProjects() * 200;
+    }
 }

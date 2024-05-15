@@ -13,4 +13,12 @@ public class Tester extends Employee{
         this.numberOfBugs = numberOfBugs;
     }
 
+    public int getNumberOfBugs() {
+        return numberOfBugs;
+    }
+
+    @Override
+    public double annualIncome() {
+        return super.annualIncome() + this.getNumberOfBugs()*10;
+    }
 }

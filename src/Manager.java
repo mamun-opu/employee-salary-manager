@@ -28,5 +28,17 @@ public class Manager extends Employee {
         this.travelDays = travelDays;
     }
 
-    // Getters and setters (if needed) can be added here
+    public int getTravelDays() {
+        return travelDays;
+    }
+
+    public int getClientsNumber() {
+        return clientsNumber;
+    }
+
+    @Override
+    public double annualIncome() {
+
+        return super.annualIncome() + 500 * this.getClientsNumber() + 100 * this.getTravelDays();
+    }
 }
