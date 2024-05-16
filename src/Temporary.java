@@ -7,23 +7,16 @@ public class Temporary implements Contract {
         this.workingHours = workingHours;
     }
 
-    @Override
     public double accumulatedSalary() {
-        return hourlyWages*workingHours;
+        return hourlyWages * (double) workingHours;
     }
 
     @Override
     public String toString() {
-        return "Temporary{" +
-                "hourlyWages=" + hourlyWages +
-                ", workingHours=" + workingHours +
-                '}';
+        return "Temporary{hourlyWages=" + hourlyWages + ", workingHours=" + workingHours + "}";
     }
 
-
-
     public String contractInfo() {
-        return String.format("He is a temporary employee with %.2f hourly salary, and he has worked for %d hours.\n",
-                hourlyWages, workingHours);
+        return String.format("He is a temporary employee with %.2f hourly salary, and he has worked for %d hours.\n", hourlyWages, workingHours);
     }
 }

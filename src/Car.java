@@ -15,12 +15,12 @@ public class Car extends Vehicle {
     public CarType getType() {
         return type;
     }
+
+    @Override
     public String toString() {
-        // Call the toString method of the superclass (Vehicle) to include common attributes
         String total = super.toString();
-        // Add Car-specific information to the string representation
-        total = total + "   -Gear: " + this.getGear() + "\n";
-        total = total + "   -Type: " + this.getType() + "\n";
+        total = total + "   -Gear: " + String.valueOf(getGear()) + "\n";
+        total = total + "   -Type: " + String.valueOf(getType()) + "\n";
         return total;
     }
 }

@@ -1,4 +1,4 @@
-import java.time.Period;
+import java.io.PrintStream;
 
 public class Employee {
     private final String name;
@@ -8,20 +8,16 @@ public class Employee {
     private Vehicle vehicle;
     private Contract contract;
 
-
-    // Constructors
     public Employee(String name, int birthYear) {
-        this(name, birthYear, 0, 100, null);
-
+        this(name, birthYear, 0.0, 100.0, null);
     }
 
     public Employee(String name, int birthYear, Vehicle vehicle) {
-        this(name, birthYear, 0, 100, vehicle);
+        this(name, birthYear, 0.0, 100.0, vehicle);
     }
 
     public Employee(String name, int birthYear, double occupationRate) {
-        this(name, birthYear, 0, 100, null);
-
+        this(name, birthYear, 0.0, occupationRate, null);
     }
 
     public Employee(String name, int birthYear, double monthlyIncome, double occupationRate) {
@@ -29,56 +25,55 @@ public class Employee {
     }
 
     public Employee(String name, int birthYear, double occupationRate, Vehicle vehicle) {
-        this(name, birthYear,0, occupationRate,null );
+        this(name, birthYear, 0.0, occupationRate, vehicle);
     }
-
-
 
     public Employee(String name, int birthYear, double monthlyIncome, double occupationRate, Vehicle vehicle) {
         this.name = name;
         this.birthYear = birthYear;
         this.monthlyIncome = monthlyIncome;
         this.vehicle = vehicle;
-        if(occupationRate < 10){
-            this.occupationRate = 10;
-        } else if (occupationRate > 100) {
-            this.occupationRate = occupationRate;
-        }else{
-            this.occupationRate = 100;
-        }
-
-        System.out.println("We have a new employee: " + this.getName() + ", " + this.getClass().getName() );
+        setOccupationRate(occupationRate);
+        PrintStream out = System.out;
+        out.println("We have a new employee: " + getName() + ", " + getClass().getSimpleName());
     }
 
-    // Getters
     public String getName() {
         return name;
     }
-    public String contractInfo(){
-        return this.contract.contractInfo();
-    }
 
+    public String contractInfo() {
+        return contract.contractInfo();
+    }
 
     public int calculateAge() {
         return 2024 - birthYear;
     }
-    public double annualIncome(){
-        return monthlyIncome * 12;
-    }
-    public void signContract(Contract contract){
-        this.contract = contract;
+
+    public double annualIncome() {
+        return monthlyIncome * 12.0;
     }
 
+    public void signContract(Contract contract) {
+        this.contract = contract;
+    }
 
     public Vehicle getVehicle() {
         return vehicle;
     }
 
+    public void setOccupationRate(double occupationRate) {
+        if (occupationRate < 10.0) {
+            this.occupationRate = 10.0;
+        } else if (occupationRate > 100.0) {
+            this.occupationRate = 100.0;
+        } else {
+            this.occupationRate = occupationRate;
+        }
+    }
+
     @Override
     public String toString() {
-
-        return "Name: " + this.getName() + ", a " + this.getClass().getName() +'\n' +
-                this.getVehicle();
-
+        return "Name: " + getName() + ", a " + getClass().getSimpleName() + "\n" + String.valueOf(getVehicle());
     }
 }
